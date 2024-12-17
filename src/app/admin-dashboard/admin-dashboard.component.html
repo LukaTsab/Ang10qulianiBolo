@@ -1,4 +1,4 @@
-<div class="dashboard-container">
+<!-- <div class="dashboard-container">
   <h1>{{ title }} luka</h1>
   <nav>
     <ul>
@@ -11,4 +11,48 @@
     </ul>
   </nav>
   <router-outlet></router-outlet>
+</div> -->
+
+<!-- 2 -->
+<!-- <div class="dashboard-container">
+  <nav class="sidebar">
+    <h1 class="logo">Admin</h1>
+    <ul>
+      <li><a routerLink="./"><span class="icon">&#128200;</span> Dashboard</a></li>
+      <li><a routerLink="products"><span class="icon">&#128717;</span> Products</a></li>
+      <li><a routerLink="orders"><span class="icon">&#128722;</span> Orders</a></li>
+      <li><a routerLink="customers"><span class="icon">&#128101;</span> Customers</a></li>
+      <li><a routerLink="reviews"><span class="icon">&#11088;</span> Reviews</a></li>
+      <li><a routerLink="settings"><span class="icon">&#9881;</span> Settings</a></li>
+    </ul>
+    <div class="extras">
+      <a routerLink="extras">+ Extras</a>
+    </div>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+
+
+<!-- 3 -->
+<div class="dashboard-container">
+  <nav class="sidebar">
+    <h1 class="logo">Admin</h1>
+    <ul>
+      <li><a routerLink="./"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+      <li><a routerLink="products"><i class="fas fa-box"></i> Products</a></li>
+      <li><a routerLink="orders"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+      <li><a routerLink="customers"><i class="fas fa-users"></i> Customers</a></li>
+      <li><a routerLink="reviews"><i class="fas fa-star"></i> Reviews</a></li>
+      <li><a routerLink="settings"><i class="fas fa-cogs"></i> Settings</a></li>
+    </ul>
+    <div class="extras">
+      <a routerLink="extras"><i class="fas fa-plus-circle"></i> Extras</a>
+    </div>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">

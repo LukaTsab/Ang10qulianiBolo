@@ -1,1 +1,161 @@
-<p>orders-page works!</p>
+<!-- <div class="orders-container">
+    <div class="header">
+      <h2>Orders</h2>
+      <input type="text" placeholder="Search orders" class="search-bar" />
+    </div>
+  
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.item }}</td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.total }}</td>
+          <td>
+            <span
+              class="status"
+              [class.processing]="order.status === 'Processing'"
+              [class.completed]="order.status === 'Completed'"
+              [class.cancelled]="order.status === 'Cancelled'"
+            >
+              {{ order.status }}
+            </span>
+          </td>
+          <td>
+            <button class="action-button">...</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button>&lt;</button>
+      <span>1</span>
+      <span>2</span>
+      <span>...</span>
+      <span>23</span>
+      <span>24</span>
+      <button>&gt;</button>
+    </div>
+  </div>
+   -->
+
+
+   <!-- 2 -->
+   <!-- <div class="orders-container">
+    <div class="header">
+      <h2>Orders</h2>
+      <input type="text" placeholder="Search orders" class="search-bar" />
+    </div>
+  
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="order-details">
+            <img [src]="order.imageUrl" alt="{{ order.item }}" class="order-image" />
+            {{ order.item }}
+          </td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.total }}</td>
+          <td>
+            <span
+              class="status"
+              [class.processing]="order.status === 'Processing'"
+              [class.completed]="order.status === 'Completed'"
+              [class.cancelled]="order.status === 'Cancelled'"
+            >
+              {{ order.status }}
+            </span>
+          </td>
+          <td>
+            <button class="action-button">...</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button>&lt;</button>
+      <span>1</span>
+      <span>2</span>
+      <span>...</span>
+      <span>23</span>
+      <span>24</span>
+      <button>&gt;</button>
+    </div>
+  </div> -->
+  
+  <!-- 3 -->
+  <div class="orders-container">
+    <div class="header">
+      <h2>Orders</h2>
+      <input
+        type="text"
+        placeholder="Search orders"
+        class="search-bar"
+        [(ngModel)]="searchTerm"
+      />
+    </div>
+  
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of filteredOrders">
+          <td class="order-details">
+            <img [src]="order.imageUrl" alt="{{ order.item }}" class="order-image" />
+            {{ order.item }}
+          </td>
+          <td>{{ order.date }}</td>
+          <td>{{ order.total }}</td>
+          <td>
+            <span
+              class="status"
+              [class.processing]="order.status === 'Processing'"
+              [class.completed]="order.status === 'Completed'"
+              [class.cancelled]="order.status === 'Cancelled'"
+            >
+              {{ order.status }}
+            </span>
+          </td>
+          <td>
+            <button class="action-button">...</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="pagination">
+      <button>&lt;</button>
+      <span>1</span>
+      <span>2</span>
+      <span>...</span>
+      <span>23</span>
+      <span>24</span>
+      <button>&gt;</button>
+    </div>
+  </div>

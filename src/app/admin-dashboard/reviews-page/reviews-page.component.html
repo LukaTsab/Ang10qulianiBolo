@@ -1,1 +1,35 @@
-<p>reviews-page works!</p>
+<div class="reviews-container">
+    <h2>Reviews</h2>
+  
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search reviews"
+        (input)="search($event)"
+      />
+    </div>
+  
+    <!-- Reviews Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Initials</th>
+          <th>Name</th>
+          <th>Review</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let review of filteredReviews">
+          <td>{{ getInitials(review.name) }}</td>
+          <td>{{ review.name }}</td>
+          <td>{{ review.review }}</td>
+          <td>
+            <button>...</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

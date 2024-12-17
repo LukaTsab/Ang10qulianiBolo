@@ -1,1 +1,178 @@
-<p>dashboard-page works!</p>
+<!-- <div class="dashboard-container">
+    
+    <div class="header-cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <p class="value">${{ totalSales }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Customers</h3>
+        <p class="value">{{ customerCount }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p class="value">{{ ordersCount }}</p>
+        <span class="subtitle">MONTHLY GOALS: {{ monthlyGoal }}</span>
+        <div class="progress">
+          <div class="progress-bar" [style.width.%]="(ordersCount / monthlyGoal) * 100"></div>
+        </div>
+        <span>{{ ordersLeft }} Left</span>
+      </div>
+    </div>
+  
+  
+    <div class="best-selling">
+      <h3>Best Selling</h3>
+      <p class="total-sales">${{ totalSales }} — Total Sales</p>
+      <div class="selling-items">
+        <p>Classic Monochrome Tees — <b>$940 Sales</b></p>
+        <p>Monochromatic Wardrobe — <b>$790 Sales</b></p>
+        <p>Essential Neutrals — <b>$740 Sales</b></p>
+      </div>
+      <div class="chart-placeholder"></div>
+    </div>
+  
+    
+    <div class="recent-orders">
+      <h3>Recent Orders</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let order of recentOrders">
+          <td>{{ order.item }}</td>
+          <td>{{ order.date }}</td>
+          <td>${{ order.total }}</td>
+          <td>{{ order.status }}</td>
+        </tr>
+      </table>
+    </div>
+  </div> -->
+
+
+
+
+  <!-- 2 -->
+
+  <!-- <div class="dashboard-container">
+
+    <div class="header-cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <p class="value">${{ totalSales }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Customers</h3>
+        <p class="value">{{ customerCount }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p class="value">{{ ordersCount }}</p>
+        <span class="subtitle">MONTHLY GOALS: {{ monthlyGoal }}</span>
+        <div class="progress">
+          <div class="progress-bar" [style.width.%]="(ordersCount / monthlyGoal) * 100"></div>
+        </div>
+        <span>{{ ordersLeft }} Left</span>
+      </div>
+    </div>
+  
+    <div class="best-selling">
+      <h3>Best Selling</h3>
+      <p class="total-sales">${{ totalSales }} — Total Sales</p>
+      <div class="selling-items">
+        <p>Classic Monochrome Tees — <b>$940 Sales</b></p>
+        <p>Monochromatic Wardrobe — <b>$790 Sales</b></p>
+        <p>Essential Neutrals — <b>$740 Sales</b></p>
+      </div>
+      <div class="chart-placeholder"></div>
+    </div>
+  
+    <div class="recent-orders">
+      <h3>Recent Orders</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Date</th>
+          <th>Total</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let order of recentOrders">
+          <td>{{ order.item }}</td>
+          <td>{{ order.date }}</td>
+          <td>${{ order.total }}</td>
+          <td>{{ order.status }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+   -->
+
+
+   <!-- 3 -->
+
+   <div class="dashboard-container">
+    <!-- Header Cards -->
+    <div class="header-cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <p class="value">${{ totalSales }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Customers</h3>
+        <p class="value">{{ customerCount }}</p>
+        <span class="subtitle">THIS MONTH</span>
+      </div>
+      <div class="card">
+        <h3>Orders</h3>
+        <p class="value">{{ ordersCount }}</p>
+        <span class="subtitle">MONTHLY GOALS: {{ monthlyGoal }}</span>
+        <div class="progress">
+          <div class="progress-bar" [style.width.%]="(ordersCount / monthlyGoal) * 100"></div>
+        </div>
+        <span>{{ ordersLeft }} Left</span>
+      </div>
+    </div>
+  
+    <!-- Best Selling and Recent Orders -->
+    <div class="main-content">
+      <!-- Best Selling -->
+      <div class="best-selling">
+        <h3>Best Selling</h3>
+        <p class="total-sales">${{ totalSales }} — Total Sales</p>
+        <div class="selling-items">
+          <p>Classic Monochrome Tees — <b>$940 Sales</b></p>
+          <p>Monochromatic Wardrobe — <b>$790 Sales</b></p>
+          <p>Essential Neutrals — <b>$740 Sales</b></p>
+        </div>
+        <div class="chart-placeholder"></div>
+      </div>
+  
+      <!-- Recent Orders -->
+      <div class="recent-orders">
+        <h3>Recent Orders</h3>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+          <tr *ngFor="let order of recentOrders">
+            <td>{{ order.item }}</td>
+            <td>{{ order.date }}</td>
+            <td>${{ order.total }}</td>
+            <td>{{ order.status }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  

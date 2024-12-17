@@ -1,1 +1,36 @@
-<p>customers-page works!</p>
+<div class="customers-container">
+    <h2>Customers</h2>
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search customers"
+        (input)="search($event)"
+        class="search-input"
+      />
+    </div>
+    <table class="customers-table">
+      <thead>
+        <tr>
+          <th> </th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Shipping Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>
+            <div class="initials">{{ customer.initials }}</div>
+          </td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.shippingAddress }}</td>
+          <td>
+            <button class="action-button">...</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
