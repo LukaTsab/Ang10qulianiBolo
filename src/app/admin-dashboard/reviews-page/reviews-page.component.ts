@@ -25,18 +25,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './reviews-page.component.css',
 })
 export class ReviewsPageComponent implements OnInit {
-  reviews: any[] = []; // Full list of reviews
-  filteredReviews: any[] = []; // Filtered list for display
+  reviews: any[] = []; 
+  filteredReviews: any[] = []; 
 
   constructor(private reviewsService: ReviewsService) {}
 
   ngOnInit(): void {
-    // Fetch reviews on initialization
+    
     this.reviews = this.reviewsService.getReviews();
-    this.filteredReviews = [...this.reviews]; // Initialize filtered list
+    this.filteredReviews = [...this.reviews]; 
   }
 
-  // Search functionality
+
   search(event: Event): void {
     const query = (event.target as HTMLInputElement).value.toLowerCase();
 
@@ -46,7 +46,6 @@ export class ReviewsPageComponent implements OnInit {
     );
   }
 
-  // Get initials for display
   getInitials(name: string): string {
     if (!name) return '';
     const [firstName, lastName] = name.split(' ');

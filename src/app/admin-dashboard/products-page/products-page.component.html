@@ -1,2 +1,78 @@
-<h2>Products</h2>
-<button (click)="navigateToAddProduct()">Add Product</button>
+
+
+<!-- 1 -->
+<!-- <div class="products-container">
+    <h1>Products</h1>
+    <button routerLink="/dashboard/products/add">Add Product</button>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Action</th>
+          <th>Name</th>
+          <th>SKU</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+            <td>
+                <img [src]="product.image" alt="{{ product.name }}" width="50" />
+            </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.sku }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.stockStatus }}</td>
+          <td>{{ product.category }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  -->
+  
+
+  <!-- 2 -->
+
+  <div class="products-page-header">
+    <h1>Products</h1>
+    <div>
+      <input
+        type="text"
+        placeholder="Search products"
+        (input)="search($event)"
+        class="search-input"
+      />
+      <button routerLink="/dashboard/products/add" class="add-product-btn">Add Product</button>
+    </div>
+  </div>
+  
+  <div class="products-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Action</th>
+          <th>Name</th>
+          <th>SKU</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td>
+            <img [src]="product.image" alt="{{ product.name }}" width="50" />
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.sku }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.stockStatus }}</td>
+          <td>{{ product.category }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

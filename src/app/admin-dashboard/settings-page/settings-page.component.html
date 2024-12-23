@@ -1,1 +1,46 @@
-<p>settings-page works!</p>
+<div class="settings-container">
+    <h2>Settings</h2>
+  
+    <form [formGroup]="settingsForm" (ngSubmit)="saveChanges()">
+      <div class="form-group">
+        <label for="siteName">Site Name</label>
+        <input
+          id="siteName"
+          type="text"
+          formControlName="siteName"
+          class="form-control"
+          [class.invalid]="settingsForm.get('siteName')?.invalid && settingsForm.get('siteName')?.touched"
+          placeholder="Enter site name"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="supportEmail">Support Email</label>
+        <input
+          id="supportEmail"
+          type="email"
+          formControlName="supportEmail"
+          class="form-control"
+          [class.invalid]="settingsForm.get('supportEmail')?.invalid && settingsForm.get('supportEmail')?.touched"
+          placeholder="Enter support email"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="monthlyOrderGoal">Monthly Order Goal</label>
+        <input
+          id="monthlyOrderGoal"
+          type="text"
+          formControlName="monthlyOrderGoal"
+          class="form-control"
+          [class.invalid]="settingsForm.get('monthlyOrderGoal')?.invalid && settingsForm.get('monthlyOrderGoal')?.touched"
+          placeholder="Enter monthly order goal"
+        />
+      </div>
+  
+      <button type="submit" class="btn-save" [disabled]="settingsForm.invalid">Save Changes</button>
+    </form>
+  
+    <p class="feedback-message" *ngIf="message">{{ message }}</p>
+  </div>
+  

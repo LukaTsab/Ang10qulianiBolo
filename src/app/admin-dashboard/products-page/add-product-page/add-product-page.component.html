@@ -1,4 +1,4 @@
-<h2>Add Product</h2>
+<!-- <h2>Add Product</h2>
 <form>
   <label for="product-name">Product Name:</label>
   <input id="product-name" type="text" required />
@@ -8,4 +8,80 @@
 
   <button type="submit">Submit</button>
 </form>
+ -->
 
+
+
+
+ <!-- 2 -->
+
+ <!-- <div class="add-product-container">
+  <h1>Add Product</h1>
+  <form (ngSubmit)="addProduct()">
+    <label>Title (Name): <input [(ngModel)]="product.name" name="name" required /></label>
+    <label>SKU: <input [(ngModel)]="product.sku" name="sku" required /></label>
+    <label>Price: <input type="number" [(ngModel)]="product.price" name="price" required /></label>
+    <label>Stock Status:
+      <select [(ngModel)]="product.stockStatus" name="stockStatus">
+        <option value="in-stock">In Stock</option>
+        <option value="out of stock">Out of Stock</option>
+      </select>
+    </label>
+    <label>Category: <input [(ngModel)]="product.category" name="category" required /></label>
+    <label>Available Quantity: <input type="number" [(ngModel)]="product.availableQuantity" name="availableQuantity" /></label>
+    <label>Description: <textarea [(ngModel)]="product.description" name="description"></textarea></label>
+    <label>Image Path: <input [(ngModel)]="product.image" name="image" placeholder="assets/images/product.png" /></label>
+    <button type="submit">Save Product</button>
+  </form>
+</div> -->
+
+
+<div class="add-product-container">
+  <h1>Add Product</h1>
+  <form (ngSubmit)="addProduct()">
+    <div class="form-grid">
+      <!-- Left Section -->
+      <div class="form-left">
+        <label>Title:
+          <input type="text" [(ngModel)]="product.name" name="name" required pattern="[A-Za-z ]+"/>
+        </label>
+        <label>Price:
+          <input type="number" [(ngModel)]="product.price" name="price" required/>
+        </label>
+        <label>Category:
+          <input type="text" [(ngModel)]="product.category" name="category" required pattern="[A-Za-z ]+"/>
+        </label>
+        <label>SKU:
+          <input type="number" [(ngModel)]="product.sku" name="sku" required/>
+        </label>
+        <label>Description:
+          <textarea [(ngModel)]="product.description" name="description"></textarea>
+        </label>
+      </div>
+
+      <!-- Right Section -->
+      <div class="form-right">
+        <label>Stock Status:
+          <select [(ngModel)]="product.stockStatus" name="stockStatus">
+            <option *ngFor="let status of stockStatusOptions" [value]="status">{{ status }}</option>
+          </select>
+        </label>
+        <label>Available Quantity:
+          <input type="number" [(ngModel)]="product.availableQuantity" name="availableQuantity" required/>
+        </label>
+
+        <label>Images:</label>
+        <div class="image-selection">
+          <div *ngFor="let image of availableImages">
+            <img
+              [src]="image.path"
+              [class.selected]="product.image === image.path"
+              (click)="selectImage(image.path)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="save-btn">Save Product</button>
+  </form>
+</div>

@@ -118,17 +118,19 @@
    <!-- 3 -->
 
    <div class="dashboard-container">
-    <!-- Header Cards -->
+ 
     <div class="header-cards">
       <div class="card">
         <h3>Total Sales</h3>
         <p class="value">${{ totalSales }}</p>
         <span class="subtitle">THIS MONTH</span>
+        <img src="assets\images\statistic.png" alt="Customers Chart" class="card-image" />
       </div>
       <div class="card">
         <h3>Customers</h3>
         <p class="value">{{ customerCount }}</p>
         <span class="subtitle">THIS MONTH</span>
+        <img src="assets/images/statistic2.png" alt="Customers Chart" class="card-image" />
       </div>
       <div class="card">
         <h3>Orders</h3>
@@ -141,9 +143,7 @@
       </div>
     </div>
   
-    <!-- Best Selling and Recent Orders -->
     <div class="main-content">
-      <!-- Best Selling -->
       <div class="best-selling">
         <h3>Best Selling</h3>
         <p class="total-sales">${{ totalSales }} — Total Sales</p>
@@ -155,7 +155,7 @@
         <div class="chart-placeholder"></div>
       </div>
   
-      <!-- Recent Orders -->
+
       <div class="recent-orders">
         <h3>Recent Orders</h3>
         <table>

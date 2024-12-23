@@ -198,4 +198,14 @@
   .content {
     flex: 1;
     padding: 20px;
+
   }
+
+  .card-image {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-top: 10px;
+  }
+  
+

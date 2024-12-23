@@ -78,7 +78,7 @@ export class CustomersPageComponent implements OnInit {
       ...customer,
       initials: this.getInitials(customer.name),
     }));
-    this.filteredCustomers = [...this.customers]; // Initialize filtered customers
+    this.filteredCustomers = [...this.customers]; 
   }
 
   getInitials(name: string): string {
@@ -93,5 +93,6 @@ export class CustomersPageComponent implements OnInit {
       customer.email.toLowerCase().includes(query) ||
       customer.shippingAddress.toLowerCase().includes(query)
     );
+    console.log(this.filteredCustomers); // Debug
   }
 }
